@@ -260,7 +260,7 @@ footer {
     text-decoration: none;
     border: none;
     font-size: 1rem;
-    background: hsl(136, 65%, 51%);
+    background: linear-gradient(90deg, hsl(136, 65%, 51%), hsl(233, 8%, 62%));
     padding: .7em 1.7em;
     color: #fff;
     border-radius: 30px;
@@ -350,6 +350,9 @@ footer {
         display: flex;
         justify-content: space-between;
         text-align: left;
+    }
+    .book-item {
+        flex: 0 1 24%;
     }
     .easybank__book-articles-title {
         text-align: left;

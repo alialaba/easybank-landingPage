@@ -6,6 +6,7 @@ const email = document.getElementById('mail');
 const password = document.getElementById('pwd1');
 const password2 = document.getElementById('pwd2');
 const checkBox = document.getElementById('check')
+const spin = document.querySelector('.spin');
 
 // sign in
 const formLogin = document.getElementById('form2')
@@ -99,9 +100,11 @@ function checkInputs() {
         setErrorFor(check, 'You have to agree');
     } else {
         setSuccess(check)
+        spin.classList.remove('none');
         setTimeout(function() {
-            alert('Sign Up successfully')
-            location.reload();
+            spin.classList.add('none')
+                // alert('Sign Up successfully')
+                // location.reload();
         }, 1000)
 
     }
