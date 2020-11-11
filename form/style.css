@@ -9,6 +9,7 @@ body {
     padding: 0;
     background: hsl(220, 16%, 96%);
     font-family: 'Public Sans', sans-serif;
+    position: relative;
 }
 
 .field.error input {
