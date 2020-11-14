@@ -122,6 +122,11 @@ button:hover {
 
 /* spinner */
 
+/* display none if it has a none classname */
+.spinner.none{
+    display: none;
+}
+
 .spinner {
     position: fixed;
     display: flex;
