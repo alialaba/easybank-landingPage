@@ -8,6 +8,9 @@ const password2 = document.getElementById('pwd2');
 const checkBox = document.getElementById('check')
 const spin = document.querySelector('.spinner');
 
+// target all error messages
+const errorM = document.querySelectorAll('small');
+
 // sign in
 const formLogin = document.getElementById('form2')
 const emailLogin = document.getElementById('mail2')
@@ -15,9 +18,8 @@ const passLogin = document.getElementById('pwd3')
 if (form !== null) {
     form.addEventListener('submit', (e) => {
         e.preventDefault();
-
         checkInputs();
-        submitForm()
+        submitForm();
 
     })
 } else {
@@ -108,7 +110,20 @@ function checkInputs() {
 }
 // spinner function
 function submitForm() {
+    // add spinner
     spin.classList.remove('none');
+
+    // check if any error message is present or not
+    let filteredError = [...errorM].filter(message => {
+        return message.outerText !== '';
+    })
+   
+    // if no error message, clear the form after submisssion
+    if(f.length === 0){
+        form.reset();
+    }
+    
+    // remove spinner after a second
     setTimeout(function() {
         spin.classList.add('none')
 
